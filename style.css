@@ -54,5 +54,8 @@ form {
 form label {
   display: grid;
   grid-template-columns: subgrid;
+}
+
+form button {
   grid-column: 1 / -1;
 }
