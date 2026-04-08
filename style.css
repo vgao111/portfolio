@@ -45,7 +45,16 @@ nav a:hover {
   background-color: oklch(from var(--color-accent) 95% 5% h);
 }
 
-input, textarea, button {
+form{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
+
+
+
+/* input, textarea, button {
   font: inherit;
   display: block;
   width: 100%;
@@ -55,4 +64,4 @@ input, textarea, button {
 
 label {
   margin-block: 1em;
-}
+} */
