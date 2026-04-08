@@ -50,6 +50,7 @@ input, textarea, button {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  margin-block: 1em;
 }
 
 label {
