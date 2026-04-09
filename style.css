@@ -93,7 +93,7 @@ button {
 }
 
 body.resumepage {
-  background-image: url("images/istockphoto-623912878-612x612.jpg");
+  background-color: lightblue;
 }
 
 section.aboutme {
@@ -110,8 +110,4 @@ section.aboutme h2 {
 
 section.aboutme p {
   margin: 0;
-}
-
-h6.aboutmeheader{
-  font: 400%;
 }
