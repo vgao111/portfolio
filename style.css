@@ -95,3 +95,19 @@ button {
 body.resumepage {
   background-color: lightblue;
 }
+
+.aboutme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-block: 2em;
+}
+
+.aboutme h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0.5em;
+}
+
+.aboutme p {
+  margin: 0;
+}
