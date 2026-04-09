@@ -118,5 +118,9 @@ section.aboutme p {
 }
 
 body.resumepage h3{
-  
+  display: flex;
+  margin-bottom: 1.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
 }
