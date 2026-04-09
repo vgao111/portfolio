@@ -111,3 +111,7 @@ section.aboutme h2 {
 section.aboutme p {
   margin: 0;
 }
+
+h6.aboutmeheader{
+  font: 2em;
+}
