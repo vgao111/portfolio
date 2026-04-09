@@ -114,11 +114,6 @@ section.aboutme h2 {
 
 section.aboutme p {
   margin: 0;
-  display: flex;
-  margin-bottom: 2em;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(20% 3% 200);
 }
 
 
