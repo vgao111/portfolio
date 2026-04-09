@@ -101,6 +101,10 @@ section.aboutme {
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   margin-block: 2em;
+
+  border-bottom: 3px solid oklch(20% 3% 200);
+  padding-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 section.aboutme h2 {
