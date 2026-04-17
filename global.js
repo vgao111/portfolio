@@ -29,3 +29,8 @@ for (let p of pages) {
 
   nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 }
+
+let a = document.createElement('a');
+a.href = url;
+a.textContent = title;
+nav.append(a);
