@@ -117,3 +117,11 @@ section.aboutme p {
 .linkedin-link {
   display: inline-block;
 }
+
+
+label.color-scheme{
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
