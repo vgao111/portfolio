@@ -23,6 +23,7 @@ if (profileStats) {
           <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
           <dt>Followers:</dt><dd>${githubData.followers}</dd>
           <dt>Following:</dt><dd>${githubData.following}</dd>
+          <dt>Company:</dt><dd>${githubData.company}</dd>
         </dl>
     `;
 }
