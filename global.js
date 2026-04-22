@@ -95,10 +95,10 @@ export async function fetchJSON(url) {
 
 
 
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+export function renderProjects(projectss, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
 
-  for (let project of projects) {
+  for (let project of projectss) {
     const article = document.createElement('article');
 
     article.innerHTML = `
