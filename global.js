@@ -110,3 +110,12 @@ export function renderProjects(projectss, containerElement, headingLevel = 'h2')
     containerElement.appendChild(article);
   }
 } 
+
+
+https://api.github.com/users/vgao111
+
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+  
+}
