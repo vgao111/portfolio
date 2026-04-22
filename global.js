@@ -110,4 +110,3 @@ export function renderProjects(projectss, containerElement, headingLevel = 'h2')
     containerElement.appendChild(article);
   }
 } 
-

@@ -5,5 +5,7 @@ const projects = await fetchJSON('../lib/projects.json');
 
 const projectsContainer = document.querySelector('.projects');
 
+const projectsTitle = document.querySelector('#projtitle');
+projectsTitle.textContent = `Projects (${projects.length})`;
 
 renderProjects(projects, projectsContainer, 'h2');
