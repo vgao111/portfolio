@@ -33,5 +33,5 @@ arcs.forEach((arc, idx) => {
   d3.select('#projects-plot')
     .append('path')
     .attr('d', arc)
-    .attr('fill', colors(index));
+    .attr('fill', colors(idx));
 });
