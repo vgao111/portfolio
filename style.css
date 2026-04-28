@@ -125,3 +125,11 @@ label.color-scheme{
   top: 1rem;
   right: 1rem;
 }
+
+
+.project-year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  margin-top: 0.5em;
+}
