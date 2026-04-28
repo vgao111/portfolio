@@ -12,14 +12,9 @@ projectsTitle.textContent = `${projects.length} Projects `;
 renderProjects(projects, projectsContainer, 'h2');
 
 
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-
-let arc = arcGenerator({
-  startAngle: 0,
-  endAngle: 2 * Math.PI,
-});
-d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
-
+let arcGenerator = d3.arc()
+  .innerRadius(0)
+  .outerRadius(50);
 
 let data = [1, 2];
 
@@ -42,7 +37,7 @@ let arcs = arcData.map((d) => arcGenerator(d));
 
 let colors = ['gold', 'purple'];
 
-arcs.forEach((arc) => {
+arcs.forEach((arc, idx) => {
   d3.select('svg')
     .append('path')
     .attr('d', arc)
