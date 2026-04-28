@@ -40,6 +40,7 @@ for (let d of data) {
 
 let arcs = arcData.map((d) => arcGenerator(d));
 
+let colors = ['gold', 'purple'];
 
 arcs.forEach((arc) => {
   d3.select('svg')
