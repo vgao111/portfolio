@@ -11,6 +11,20 @@ projectsTitle.textContent = `${projects.length} Projects `;
 
 renderProjects(projects, projectsContainer, 'h2');
 
+let query = '';
+
+let searchInput = document.querySelector('.searchBar');
+
+searchInput.addEventListener('change', (event) => {
+  query = event.target.value;
+
+  let filteredProjects = projects.filter((project) =>
+    project.title.includes(query)
+  );
+
+  renderProjects(filteredProjects, projectsContainer, 'h2');
+});
+
 
 let arcGenerator = d3.arc()
   .innerRadius(0)
@@ -53,3 +67,4 @@ data.forEach((d, idx) => {
     .attr('style', `--color:${colors(idx)}`)
     .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
 });
+
