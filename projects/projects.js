@@ -1,5 +1,5 @@
 import { fetchJSON, renderProjects } from '../global.js';
-import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm'; 
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 const projects = await fetchJSON('../lib/projects.json');
 
@@ -13,6 +13,8 @@ let arcGenerator = d3.arc()
   .outerRadius(50);
 
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+let selectedIndex = -1;
 
 function renderPieChart(projectsGiven) {
   let rolledData = d3.rollups(
@@ -39,14 +41,30 @@ function renderPieChart(projectsGiven) {
     svg
       .append('path')
       .attr('d', arc)
-      .attr('fill', colors(idx));
+      .attr('fill', colors(idx))
+      .attr('class', idx === selectedIndex ? 'selected' : '')
+      .on('click', () => {
+        selectedIndex = selectedIndex === idx ? -1 : idx;
+
+        svg
+          .selectAll('path')
+          .attr('class', (_, pathIdx) =>
+            pathIdx === selectedIndex ? 'selected' : ''
+          );
+
+        legend
+          .selectAll('li')
+          .attr('class', (_, legendIdx) =>
+            legendIdx === selectedIndex ? 'legend-item selected' : 'legend-item'
+          );
+      });
   });
 
   data.forEach((d, idx) => {
     legend
       .append('li')
       .attr('style', `--color:${colors(idx)}`)
-      .attr('class', 'legend-item')
+      .attr('class', idx === selectedIndex ? 'legend-item selected' : 'legend-item')
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
   });
 }
