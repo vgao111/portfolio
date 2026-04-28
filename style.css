@@ -140,3 +140,28 @@ label.color-scheme{
   margin-block: 2em;
   overflow: visible;
 }
+
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid color-mix(in oklch, canvasText, canvas 80%);
+  padding: 1em;
+  margin-block: 2em;
+  list-style: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 0.2em;
+}
