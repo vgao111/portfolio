@@ -10,26 +10,41 @@
     <h1>Meta</h1>
     <p>Stats about the code of this website.</p>
 
+    <div id="slider-container">
+      <label>
+        Show commits until:
+        <input type="range" id="commit-progress" min="0" max="100" value="100">
+        <time id="commit-time"></time>
+      </label>
+    </div>
+
     <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    <div id="scrolly-1">
+      <div id="scatter-story"></div>
+      <div id="scatter-plot">
+        <h2>Commits by time of day</h2>
+        <div id="chart"></div>
 
-    <dl id="commit-tooltip" class="info tooltip" hidden>
-      <dt>Commit</dt>
-      <dd><a href="" id="commit-link" target="_blank"></a></dd>
-      <dt>Date</dt>
-      <dd id="commit-date"></dd>
-      <dt>Time</dt>
-      <dd id="commit-time"></dd>
-      <dt>Author</dt>
-      <dd id="commit-author"></dd>
-      <dt>Lines edited</dt>
-      <dd id="commit-lines"></dd>
-    </dl>
+        <dl id="commit-tooltip" class="info tooltip" hidden>
+          <dt>Commit</dt>
+          <dd><a href="" id="commit-link" target="_blank"></a></dd>
+          <dt>Date</dt>
+          <dd id="commit-date"></dd>
+          <dt>Time</dt>
+          <dd id="commit-tooltip-time"></dd>
+          <dt>Author</dt>
+          <dd id="commit-author"></dd>
+          <dt>Lines edited</dt>
+          <dd id="commit-lines"></dd>
+        </dl>
 
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
+        <p id="selection-count">No commits selected</p>
+        <dl id="language-breakdown" class="stats"></dl>
+      </div>
+    </div>
+
+    <dl id="files"></dl>
 
     <script type="module" src="../global.js"></script>
     <script type="module" src="main.js"></script>
