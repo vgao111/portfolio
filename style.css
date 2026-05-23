@@ -348,7 +348,8 @@ circle.selected {
 }
 
 .step {
-  padding-bottom: 70vh;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #files {
