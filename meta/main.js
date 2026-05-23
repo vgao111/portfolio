@@ -358,7 +358,7 @@ d3.select('#scatter-story')
   );
 
 function onStepEnter(response) {
-  const commit = response.element.__data__;
+  const commit = response.lement.__data__;
   filteredCommits = commits.filter((d) => d.datetime <= commit.datetime);
   updateScatterPlot(data, filteredCommits);
   updateFileDisplay(filteredCommits);
